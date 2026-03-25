@@ -1,0 +1,28 @@
+{
+  "name": "@a/1",
+  "type": "module",
+  "scripts": {
+    "build": "bun with-env next build --turbo",
+    "clean": "git clean -xdf .cache .next .turbo node_modules",
+    "dev": "bun with-env next dev --turbo",
+    "lint": "eslint",
+    "start": "bun with-env next start",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "beta",
+    "@ai-sdk/openai": "beta",
+    "@ai-sdk/openai-compatible": "beta",
+    "@svgr-iconkit/flag-icons": "latest",
+    "@svgr-iconkit/flat-color-icons": "latest",
+    "@tavily/core": "latest",
+    "iso-639-1": "latest",
+    "next": "latest",
+    "next-intl": "latest",
+    "react-hotkeys-hook": "latest",
+    "redis": "latest",
+    "resumable-stream": "latest",
+    "usehooks-ts": "latest"
+  }
+}

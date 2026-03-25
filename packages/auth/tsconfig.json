@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "paths": {
+      "constant": ["../../constant"],
+      "types": ["../../types"],
+      "utils": ["../../utils"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "extends": "@a/tsconfig/base.json",
+  "include": ["*.ts", "src"]
+}

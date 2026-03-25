@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "constant": ["../../constant"],
+      "types": ["../../types"],
+      "utils": ["../../utils"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "extends": "@a/tsconfig/compiled-package.json",
+  "include": ["*.ts", "../../seed-data.ts", "src"]
+}
