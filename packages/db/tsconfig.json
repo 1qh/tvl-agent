@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
+    "rootDir": "../..",
+    "types": ["bun-types"],
     "paths": {
       "constant": ["../../constant"],
       "types": ["../../types"],
       "utils": ["../../utils"]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "drizzle.config.ts"],
   "extends": "@a/tsconfig/compiled-package.json",
   "include": ["*.ts", "../../seed-data.ts", "src"]
 }

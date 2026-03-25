@@ -4,7 +4,7 @@ import { object, z } from 'zod/v4'
 
 import { getSession } from '~/auth/server'
 import env from '~/env'
-import { s3 } from '~/s3'
+import { getS3 } from '~/s3'
 
 const fileSchema = object({
   file: z
@@ -29,6 +29,7 @@ export const POST = async (request: Request) => {
     const { name, type } = f,
       pathname = `chat/${session.user.id}/${Date.now()}.${name.split('.').pop() ?? 'dat'}`
     try {
+      const s3 = await getS3()
       await s3.write(pathname, f, { type })
       return R.json({
         contentType: type,
